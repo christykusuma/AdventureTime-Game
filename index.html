@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Space Shooter Demo</title>
+		<title>Adventure Time Game</title>
 		<link rel="stylesheet" type="text/css" href="default.css">
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 	</head>
 	<body>
-		<div class="top-section">
-			<img id="logo" src="imgs/logo.png">
-			<img id="clip-art" src="imgs/clip-art.png">
-			<img id="clip-art2" src="imgs/ice-king.png">
-			<img id="clip-art3" src="imgs/game-background.png">
-		</div>
+		<div class="container">
+			<div class="top-section">
+				<img id="logo" src="imgs/logo.png">
+				<img id="clip-art" src="imgs/clip-art.png">
+				<img id="clip-art2" src="imgs/ice-king.png">
+				<img id="clip-art3" src="imgs/game-background.png">
+			</div>
 
-		<div class="body">
-			<div class="game-over" id="game-over">
-				<div style="background-color: rgba(17, 0, 87, 0.9); height: 370px; position: absolute; top: 0; left: 0; width: 682px;">
-				<br><br><br><br>
-				<h1>Game Over!</h1>
-				<span onclick="game.restart()">Restart</span>
+			<div class="body">
+				<div class="game-over" id="game-over">
+					<div style="background-color: rgba(17, 0, 87, 0.9); height: 370px; position: absolute; top: 0; left: 0; width: 682px;">
+					<br><br><br><br>
+					<h1>Game Over!</h1>
+					<span onclick="game.restart()">Restart</span>
+					</div>
 				</div>
+
+				<div class="loading" id="loading">
+					<br><br><br><br>
+					<h1>Loading... Please wait</h1>
+				</div>
+
+				<div class="score">Score:<span id="score"></span></div>
+
+				<!-- The canvas for the panning background -->
+				<canvas id="background" width="682" height="370">
+					Your browser does not support canvas. Please try again with a different browser.
+				</canvas>
+
+				<!-- The canvas for all enemy ships and bullets -->
+				<canvas id="main" width="682" height="370">
+				</canvas>
+
+				<!-- The canvas for the hero -->
+				<canvas id="hero" width="682" height="370">
+				</canvas>
 			</div>
 
-			<div class="loading" id="loading">
-				<br><br><br><br>
-				<h1>Loading... Please wait</h1>
-			</div>
-
-			<div class="score">Score:<span id="score"></span></div>
-
-			<!-- The canvas for the panning background -->
-			<canvas id="background" width="682" height="370">
-				Your browser does not support canvas. Please try again with a different browser.
-			</canvas>
-
-			<!-- The canvas for all enemy ships and bullets -->
-			<canvas id="main" width="682" height="370">
-			</canvas>
-
-			<!-- The canvas for the hero -->
-			<canvas id="hero" width="682" height="370">
-			</canvas>
+			<button onclick="game.mute()" class="mute-button">Mute/Unmute</button>
 		</div>
 
-		<script src="helperfunctions.js"></script>
-		<script src="main.js"></script>
-		<script src="bullet.js"></script>
-		<script src="audio.js"></script>
-
+			<script src="helperfunctions.js"></script>
+			<script src="main.js"></script>
+			<script src="bullet.js"></script>
+			<script src="audio.js"></script>
 	</body>
 </html>

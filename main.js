@@ -410,6 +410,19 @@ function Game() {
 		// Display game-over text
 		document.getElementById('game-over').style.display = "block";
 	};
+
+	// Stops the background audio and starts game over audio
+	this.mute = function() {
+		if (this.backgroundAudio.volume != 0)
+		{
+			this.backgroundAudio.volume = 0;
+			this.gameOverAudio.volume = 0;
+		} else {
+			this.backgroundAudio.volume = 1;
+			this.gameOverAudio.volume = 1;	
+
+		}
+	};
 }
 
 /**
