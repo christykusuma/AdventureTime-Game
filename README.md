@@ -1,6 +1,6 @@
 # Adventure Time Game
 
-Help Finn beat the Ice King by shooting miniature versions of Jake the dog at him. Watch out for the ice blasts! A new batch of Ice Kings will come in to replace the ones that have been killed and scores will be counted. Use the arrow keys to move around and the space bar to shoot.<br><br>
+Help Finn beat the Ice King by shooting miniature versions of Jake the dog at him. Watch out for the ice blasts! A new batch of Ice Kings will come in to replace the ones that have been killed and scores will be counted. Use the arrow keys to move around and the space bar to shoot.<br>
 
 Feel free to play around with the <a target="_blank" href="http://christykusuma.com/game/">demo</a>.
 
